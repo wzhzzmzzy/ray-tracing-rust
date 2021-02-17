@@ -1,10 +1,12 @@
-use crate::common::vec3::{Point3, Vec3};
-use crate::utils::material::Material;
-use crate::common::ray::Ray;
-use crate::utils::hittable::{HitRecord, Hittable};
-use crate::common::vec3_opts::dot;
 use std::ops::Deref;
 use std::sync::Arc;
+
+use crate::common::vec3::{Point3, Vec3};
+use crate::common::vec3_opts::dot;
+use crate::common::ray::Ray;
+
+use crate::one_week::material::Material;
+use crate::one_week::hittable::{HitRecord, Hittable};
 
 pub struct Sphere {
     pub center: Point3,

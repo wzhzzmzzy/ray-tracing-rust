@@ -1,10 +1,11 @@
 use crate::common::ray::Ray;
 use crate::common::vec3::{Color, Vec3};
-use crate::utils::hittable::HitRecord;
 use crate::common::vec3_opts::{random_unit_vector, unit_vector, dot, reflect, refract, random_in_unit_sphere};
-use crate::utils::random_f64_01;
 
-pub trait Material {
+use crate::one_week::random_f64_01;
+use crate::one_week::hittable::HitRecord;
+
+pub trait Material: Send + Sync {
     fn scatter (&self, r_in: &Ray, rec: &HitRecord) -> Option<(Color, Ray)>;
 }
 

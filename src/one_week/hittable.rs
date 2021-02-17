@@ -1,8 +1,9 @@
+use std::sync::Arc;
+
 use crate::common::vec3::{Point3, Vec3};
-use crate::utils::material::{Material, NullMaterial};
 use crate::common::ray::Ray;
 use crate::common::vec3_opts::dot;
-use std::sync::Arc;
+use crate::one_week::material::{Material, NullMaterial};
 
 pub struct HitRecord {
     pub p: Point3,
@@ -35,6 +36,6 @@ impl HitRecord {
     }
 }
 
-pub trait Hittable {
+pub trait Hittable: Send + Sync {
     fn hit(&self, r: &Ray, t_min: f64, t_max: f64) -> Option<HitRecord>;
 }

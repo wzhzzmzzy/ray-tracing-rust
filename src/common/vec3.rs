@@ -1,6 +1,6 @@
 use std::default::Default;
 use std::fmt;
-use crate::utils::{random_f64_01, random_f64};
+use crate::one_week::{random_f64_01, random_f64};
 
 #[derive(Debug, Copy, Clone)]
 pub struct Vec3 {

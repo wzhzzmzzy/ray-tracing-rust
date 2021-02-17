@@ -1,5 +1,5 @@
 use crate::common::vec3::Color;
-use crate::utils::clamp;
+use crate::one_week::clamp;
 
 pub fn format_color(pixel_color: &Color, samples_per_pixel: i32) -> String {
     let mut r = pixel_color.x;

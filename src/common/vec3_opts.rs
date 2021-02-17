@@ -1,6 +1,6 @@
 use std::ops::{Add, Sub, Mul, Div, AddAssign, SubAssign, MulAssign, DivAssign, Neg};
 use crate::common::vec3::Vec3;
-use crate::utils::random_f64;
+use crate::one_week::random_f64;
 use std::cmp::min;
 
 impl Add<Vec3> for Vec3 {
